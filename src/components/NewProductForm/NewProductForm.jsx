@@ -12,12 +12,12 @@ const NewProductForm = () => {
         price: '',
         size: '',
         type: '',
-        images: ''
+        images: []
     })
 
     const [loadingImage, setLoadingImage] = useState(false)
 
-    const { title, description, price, size, type, images } = productData
+    const { title, description, price, size, type } = productData
 
     const navigate = useNavigate()
 
@@ -31,22 +31,21 @@ const NewProductForm = () => {
 
     }
 
-    const uploadProductImage = e => {
-
+    const uploadProductImages = e => {
         setLoadingImage(true)
-
 
         console.log(e.target.files)
 
         const uploadData = new FormData()
-        
-        uploadData.append('imageData', e.target.files[0])
+        for (let i = 0; i < e.target.files.length; i++) {
+            uploadData.append('imagesData', e.target.files[i])
+        }
 
         uploadService
             .uploadImage(uploadData)
             .then(({ data }) => {
                 setLoadingImage(false)
-                setProductData({ ...productData, images: data.cloudinary_url })
+                setProductData({ ...productData, images: data.cloudinary_urls })
             })
             .catch(err => console.log(err))
     }
@@ -123,7 +122,7 @@ const NewProductForm = () => {
 
             <Form.Group controlId="productImage" className="mb-3">
                 <Form.Label> imagenes </Form.Label>
-                <Form.Control type="file" onChange={uploadProductImage}/>
+                <Form.Control type="file" onChange={uploadProductImages} multiple />
             </Form.Group>
 
             <Button variant="primary" type="submit" disabled={loadingImage}>{loadingImage ? 'Espere...' : 'Crear producto'}

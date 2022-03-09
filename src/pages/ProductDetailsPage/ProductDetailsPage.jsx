@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react'
-import { Container, Row, Col, Button } from 'react-bootstrap'
+import { Container, Row, Col, Button, Carousel } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { useParams, useNavigate } from 'react-router-dom'
 import productsService from '../../services/products.service'
@@ -57,9 +57,19 @@ const ProductDetailsPage = () => {
 
                             </Col>
                             <Col md={6}>
-                                <img style={{ width: '75%' }} src={productDetails.images} alt={productDetails.title} />
-                            </Col>
 
+                              <Carousel> 
+                                {productDetails.images?.map((image) => {
+                                    return (
+                                        <Carousel.Item> 
+                                            <img style={{ width: '100%' }} src={image} alt={image} />
+                                        </Carousel.Item>
+                                    )
+                                }) }
+                               </Carousel>
+
+
+                            </Col>
                             <Link to="/getAllProducts">
                                 <Button variant="outline-primary" size='lg'> volver a todos los productos </Button>
                             </Link>
