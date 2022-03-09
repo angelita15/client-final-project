@@ -30,8 +30,8 @@ class ProductsService {
     }
 
 
-    putOneProducts = product_id => {
-        return this.api.put(`/getOneProduct/${product_id}/edit`)
+    putOneProducts = (product_id, productData) => {
+        return this.api.put(`/getOneProduct/${product_id}/edit`, productData)
     }
 
 

@@ -25,7 +25,7 @@ const ProductListPage = () => {
 
     return (
         <Container>
-            <h1> aqui van estar mis PRODUCTOS!!!! :</h1>
+            <h1>Nuestros productos!</h1>
             <ProductList products={products} />
         </Container>
 

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useParams, useNavigate } from 'react-router-dom'
 import productsService from '../../services/products.service'
 import { AuthContext } from '../../context/auth.contex'
+import './ProductDetailsPage.css'
 
 
 const ProductDetailsPage = () => {
@@ -62,7 +63,7 @@ const ProductDetailsPage = () => {
                                 {productDetails.images?.map((image) => {
                                     return (
                                         <Carousel.Item> 
-                                            <img style={{ width: '100%' }} src={image} alt={image} />
+                                            <img style={{ width: '90%' }} src={image} alt={image} />
                                         </Carousel.Item>
                                     )
                                 }) }

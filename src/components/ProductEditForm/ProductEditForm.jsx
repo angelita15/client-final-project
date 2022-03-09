@@ -69,7 +69,7 @@ const ProductEditForm = () => {
         e.preventDefault()
 
         productsService
-            .createProducts(productData)
+            .putOneProducts(products_id, productData)
             .then(() =>{
                  navigate('/getAllProducts')
             })
@@ -145,7 +145,7 @@ const ProductEditForm = () => {
                 <Form.Control type="file" onChange={uploadProductImage} />
             </Form.Group>
 
-            <Button variant="primary" type="submit" disabled={loadingImage}>{loadingImage ? 'Espere...' : 'Crear producto'}
+            <Button variant="primary" type="submit" disabled={loadingImage}>{loadingImage ? 'Espere...' : 'guardar cambios'}
 
             </Button>
         </Form>
