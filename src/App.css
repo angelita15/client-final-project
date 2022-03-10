@@ -56,15 +56,40 @@ h3{
   color: #d696d8;
   font-weight: bolder;
   font-size: 50px;
-  font-family:allura;
-  
+ 
 }
+h4{
+   color: #d696d8;
+   font-weight: bolder;
+   font-size: 30px;
+}
+
 p{
-  color: #42aaaa;
+  color: #84660b;
   font-size: 30px
+}
+.parrafoSlider{
+  color: #0fe2f1;
+
 }
 .stileBottons{
   display: flex;
   justify-content: space-between;
   margin: 30px;
+}
+.btn-dark {
+    background-color: #0fe2f1}
+    
+.dark:hover {
+    background-color: #0fe2f1;
+    border-color: #0fe2f1;
+    color: #fff;
+}
+.btn-primary {
+    color: rgb(255, 255, 255);
+    background-color: #0dcaf0;
+    border-color: #0dfdfd;
+}
+.aro{
+  height: 90vh;
 }

@@ -53,7 +53,7 @@ function SignupForm() {
                 <Form.Control type="password" name="password" value={signupForm.password} onChange={handleInputChange} />
             </Form.Group>
 
-            <Button variant="dark" type="submit" style={{ width: '100%' }}>Acceder</Button>
+            <Button type="submit" style={{ width: '100%' }}>Acceder</Button>
 
         </Form>
     )

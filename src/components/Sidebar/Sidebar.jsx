@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import './Sidebar.css';
 
+import { SocialButtons } from '../../components/Buttons/Buttons'
+import { FacebookButtons } from '../../components/Buttons/Buttons'
+
 
 const Sidebar =() => { 
 
@@ -8,11 +11,8 @@ const Sidebar =() => {
         <div className="sidebar">
             <div className="sidebarItem">
                 <span className="sidebarTitle">ABOUT ME</span>
-                <img
-                    src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/grandblog/demo/wp-content/uploads/2015/11/aboutme.jpg"
-                    alt=""
-                />
-                <p>
+                
+                <section className='text'> 
                     ¡Hola!
                     un placer conocerte tu mejor amiga de las tartas, lista para hacer los dulces de tus sueños
                     realidad!
@@ -21,12 +21,15 @@ const Sidebar =() => {
                     apasionada de la repostería me enfoco especialmente en creaciones a medida para todas las necesidades
                     de tu celebración!
                     ¡Te mereces una tarta UNICA! ¿Entonces a que esperas?
-                </p>
+                    
+                </section> 
             </div>
            
             <div className="sidebarItem">
-                <span className="sidebarTitle">FOLLOW US</span>
+                <span className="sidebarTitle">SIGUENOS</span>
                 <div className="sidebarSocial">
+                    <SocialButtons />
+                    <FacebookButtons />
                     <i className="sidebarIcon fab fa-facebook-square"></i>
                     <i className="sidebarIcon fab fa-instagram-square"></i>
                 </div>

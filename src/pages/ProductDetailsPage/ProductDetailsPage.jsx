@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { useParams, useNavigate } from 'react-router-dom'
 import productsService from '../../services/products.service'
 import { AuthContext } from '../../context/auth.contex'
+import { SocialButtons } from '../../components/Buttons/Buttons'
+import { FacebookButtons } from '../../components/Buttons/Buttons'
 import './ProductDetailsPage.css'
 
 
@@ -49,12 +51,12 @@ const ProductDetailsPage = () => {
                         <Row className="d-flex justify-content-center align-items-center">
                             <Col md={4}>
                                 <h4> Información </h4>
-                                <p> {productDetails.description}</p>
+                                <section className='text'> {productDetails.description}</section>
                                 <br></br>
                                 <h4> Detalles </h4>
-                                <p> Precio: {productDetails.price} </p>
-                                <p> Tipo: {productDetails.type} </p>
-                                <p> Tamaño: {productDetails.size} </p>
+                                <section className='text'> Precio: {productDetails.price} </section>
+                                <section className='text'> Tipo: {productDetails.type} </section>
+                                <section className='text'> Tamaño: {productDetails.size} </section>
 
                             </Col>
                             <Col md={6}>
@@ -97,6 +99,7 @@ const ProductDetailsPage = () => {
                             }
                             </div>
 
+                            
                         </Row>
                     </Container>
                     

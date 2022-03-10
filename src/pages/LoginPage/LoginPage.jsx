@@ -4,7 +4,7 @@ import LoginForm from '../../components/LoginForm/LoginForm.jsx'
 function LoginPage() {
 
     return (
-        <Container>
+        <Container className='aro'>
             <Row className="justify-content-md-center">
                 <Col md={4}>
                     <h1>Incio de sesión</h1>

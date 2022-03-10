@@ -11,19 +11,27 @@ const { default: ControlledCarousel } = require("../../components/Carousels/Caro
 const IndexPage = () => {
 
     return (
-        <div className='text-center'>
+        <div className='text-center' >
 
             <ControlledCarousel />
-            <SocialButtons />
-            <FacebookButtons />
+            <div className="sidebarItem">
+                <span className="sidebarTitle">SIGUENOS</span>
+                <div className="sidebarSocial">
+                    <SocialButtons />
+                    <FacebookButtons />
+                    <i className="sidebarIcon fab fa-facebook-square"></i>
+                    <i className="sidebarIcon fab fa-instagram-square"></i>
+                </div>
+            </div>
+          
             <Eslogan />
 
             <video src='../../videos/pexels-any-lane-5727374.mp4' autoPlay muted loop></video>
 
             <Link to="/getAllEvents">
-                <Button variant="outline-primary" className="button" size='lg'> Eventos </Button> </Link>
-            {/* <Link to="/getAllProducts">
-                <Button variant="dark" size='lg'> productos </Button> </Link>   */}
+                <Button  className="button" size='lg'> Eventos </Button> </Link>
+            <Link to="/getAllProducts">
+                <Button  size='lg'> productos </Button> </Link>  
 
         </div>
     )

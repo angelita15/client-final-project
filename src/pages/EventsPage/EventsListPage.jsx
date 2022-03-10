@@ -3,6 +3,9 @@ import { useState, useEffect } from "react"
 import eventsService from '../../services/events.service'
 import { Container } from 'react-bootstrap'
 import EventList from "../../components/EventList/EventList"
+
+import { SocialButtons } from '../../components/Buttons/Buttons'
+import { FacebookButtons } from '../../components/Buttons/Buttons'
 import './EventsPage.css'
 
 const EventListPage = () => {
@@ -23,6 +26,8 @@ const EventListPage = () => {
         <Container>
             <h1> Nuestros Eventos</h1>
             <EventList events={events} />
+            <SocialButtons />
+            <FacebookButtons />
         </Container>
 
 

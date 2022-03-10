@@ -2,6 +2,8 @@ import { Container, Row, Col } from 'react-bootstrap'
 import ContactForm from '../../components/ContactForm/ContactForm'
 import './ContactPage.css'
 
+import { SocialButtons } from '../../components/Buttons/Buttons'
+import { FacebookButtons } from '../../components/Buttons/Buttons'
 
 
 const ContactPage = () => {
@@ -19,7 +21,7 @@ const ContactPage = () => {
 
                     <h2>HOSTELERÍA Y EVENTOS </h2>
                     <h3>Contacta con nosotros</h3>
-                    <p>Si tienes cualquier duda, o pedido mándanos un e-mail y te respondere lo antes posible</p>
+                    <section className='text'>Si tienes cualquier duda, o pedido mándanos un e-mail y te respondere lo antes posible</section>
                     <ContactForm />
                 </Col>
             </Row>
@@ -39,6 +41,9 @@ const ContactPage = () => {
                     </section>
                 </Col>
             </Row>
+                    <SocialButtons />
+                    <FacebookButtons />
+
         </Container>
     )
 }

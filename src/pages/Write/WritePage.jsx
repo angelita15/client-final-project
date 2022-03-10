@@ -6,7 +6,6 @@ const Write =() => {
     return (
         <div className="write">
 
-            < Sidebar /> 
             <img
                 className="writeImg"
                 src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
@@ -28,7 +27,7 @@ const Write =() => {
                 <div className="writeFormGroup">
                     <textarea
                         className="writeInput writeText"
-                        placeholder="Tell your story..."
+                        placeholder=" escribir..."
                         type="text"
                         autoFocus={true}
                     />
@@ -37,6 +36,8 @@ const Write =() => {
                     Publish
                 </button>
             </form>
+
+            < Sidebar /> 
         </div>
       
       

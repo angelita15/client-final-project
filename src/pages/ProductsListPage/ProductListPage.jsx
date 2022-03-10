@@ -1,10 +1,12 @@
 
 import './ProductList.css'
-
 import { useState, useEffect } from "react"
 import ProductList from "../../components/ProductList/ProductList"
 import { Container } from 'react-bootstrap'
 import productsService from "../../services/products.service"
+
+import { SocialButtons } from '../../components/Buttons/Buttons'
+import { FacebookButtons } from '../../components/Buttons/Buttons'
 
 const ProductListPage = () => {
 
@@ -16,19 +18,19 @@ const ProductListPage = () => {
             .getAllProducts()
             .then(({ data }) => setProducts(data))
             .catch(err => console.log(err))
-
-            
-            
+     
 
 
     }, [])
 
     return (
         <Container>
+            
             <h1>Nuestros productos!</h1>
             <ProductList products={products} />
+            <SocialButtons />
+            <FacebookButtons />
         </Container>
-
 
     )
 

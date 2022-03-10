@@ -4,7 +4,7 @@ import SignupForm from '../../components/SignupForm/SignupForm.jsx'
 function SignupPage() {
 
     return (
-        <Container>
+        <Container className = 'aro'>
             <Row className="justify-content-md-center">
                 <Col md={4}>
                     <h1>Registro de usuario</h1>

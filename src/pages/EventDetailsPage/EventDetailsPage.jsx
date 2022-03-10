@@ -48,14 +48,14 @@ const EventDetailsPage = () => {
                         <Row className="d-flex justify-content-center aling-items-center">
                             <Col md={4}>
                                 <h4> Información </h4>
-                                <p> {eventDetails.description}</p>
+                                <section className='text'> {eventDetails.description}</section>
                                 <br></br>
                                 <h4> Detalles </h4>
-                                <p> Fecha: {eventDetails.date.slice(0, 10)} </p>
-                                <p> Calle: {eventDetails.address.street.streetName} { }
-                                    Nº {eventDetails.address.street.streetNumber} { }
-                                    {eventDetails.address.city} { }
-                                    CP:{eventDetails.address.postCode} </p>
+                                <section className='text'> Fecha: {eventDetails.date.slice(0, 10)} </section>
+                                <section className='text'> Calle: {eventDetails.address.street.streetName}   </section>
+                                    <section className='text'>  Nº: {eventDetails.address.street.streetNumber}  </section>
+                                    <section className='text'> Ciudad: {eventDetails.address.city} </section>
+                                <section className='text'>  CP: {eventDetails.address.postCode} </section>
                             </Col>
                             <Col md={6}>
                                 <img style={{ width: '75%' }} src={eventDetails.image} alt={eventDetails.title} />
