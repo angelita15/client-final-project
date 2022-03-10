@@ -14,9 +14,10 @@ import ProductListPage from '../pages/ProductsListPage/ProductListPage';
 import ProductDetailsPage from '../pages/ProductDetailsPage/ProductDetailsPage';
 import CreateProductPage from '../pages/CreateProductPage/CreateProductPage';
 import ProductEditPage from '../pages/ProductEditPage/ProductEditPage';
-
+import WritePage from '../pages/Write/WritePage'
 
 import { Routes, Route } from 'react-router-dom'
+
 
 function App() {
     return (
@@ -39,6 +40,7 @@ function App() {
                 <Route element={<SignupPage />} path="/registro" />
                 
                 <Route element={<LoginPage />} path="/inicioSesion" />
+                <Route element={<WritePage />} path="/blog" />
 
 
 

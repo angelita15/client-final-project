@@ -1,4 +1,10 @@
-.h1 {
-  background-color: #63cfcf;
-  text-align: center;
+h1 {
+ color: rgb(136, 231, 231);
+ text-align: center;
+ text-decoration-line: underline;
+}
+
+h3 {
+    text-align: center;
+    margin: 20px 0;
 }

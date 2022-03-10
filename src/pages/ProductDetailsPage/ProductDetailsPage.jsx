@@ -45,16 +45,16 @@ const ProductDetailsPage = () => {
                 loading
                     ? <h1>Cargando</h1>
                     : <Container className='hero'>
-                        <h2> Detalles de {productDetails.title} </h2>
-                        <Row className="d-flex justify-content-center aling-items-center">
+                        <h2> {productDetails.title} </h2>
+                        <Row className="d-flex justify-content-center align-items-center">
                             <Col md={4}>
-                                <h4> Informacion </h4>
+                                <h4> Información </h4>
                                 <p> {productDetails.description}</p>
-
-                                <h4> detalles </h4>
-                                <p> precio {productDetails.price} </p>
-                                <p> tipo {productDetails.type} </p>
-                                <p> tamaño {productDetails.size} </p>
+                                <br></br>
+                                <h4> Detalles </h4>
+                                <p> Precio: {productDetails.price} </p>
+                                <p> Tipo: {productDetails.type} </p>
+                                <p> Tamaño: {productDetails.size} </p>
 
                             </Col>
                             <Col md={6}>
@@ -63,7 +63,7 @@ const ProductDetailsPage = () => {
                                 {productDetails.images?.map((image) => {
                                     return (
                                         <Carousel.Item> 
-                                            <img style={{ width: '90%' }} src={image} alt={image} />
+                                            <img style={{ width: '50%' }} src={image} alt={image} />
                                         </Carousel.Item>
                                     )
                                 }) }

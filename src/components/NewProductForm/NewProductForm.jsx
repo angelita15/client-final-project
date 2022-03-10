@@ -25,8 +25,8 @@ const NewProductForm = () => {
         const { name, value } = e.target
 
         setProductData({
-            ...productData,     
-            [name]: value   
+            ...productData,
+            [name]: value
         })
 
     }
@@ -75,8 +75,8 @@ const NewProductForm = () => {
                 <Form.Label>precio</Form.Label>
                 <Form.Control type="text" name="price" value={price} onChange={handleInputChange} />
             </Form.Group>
-            
-             <Form.Group className="mb-3">
+
+            <Form.Group className="mb-3">
                 <Form.Label>tamaño</Form.Label>
                 <Form.Select
                     name="size"
@@ -86,9 +86,9 @@ const NewProductForm = () => {
                     aria-label="Default select example"
                 >
                     <option>Selecciona</option>
-                    <option value="SMALL">PEQUEÑO</option>
-                    <option value="MEDIUM">MEDIANO</option>
-                    <option value="LARGE">GRANDE</option>
+                    <option value="Pequeño">PEQUEÑO</option>
+                    <option value="Mediano">MEDIANO</option>
+                    <option value="Grande">GRANDE</option>
                 </Form.Select>
             </Form.Group>
 

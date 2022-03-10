@@ -106,9 +106,9 @@ const ProductEditForm = () => {
                     aria-label="Default select example"
                 >
                     <option>Selecciona</option>
-                    <option value="SMALL">PEQUEÑO</option>
-                    <option value="MEDIUM">MEDIANO</option>
-                    <option value="LARGE">GRANDE</option>
+                    <option value="Pequeño">PEQUEÑO</option>
+                    <option value="Mediano">MEDIANO</option>
+                    <option value="Grande">GRANDE</option>
                 </Form.Select>
             </Form.Group>
 
