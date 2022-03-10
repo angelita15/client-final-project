@@ -5,6 +5,7 @@ import { FacebookButtons } from '../../components/Buttons/Buttons'
 import Eslogan from '../../components/Imagenes/imagenes'
 import { Link } from 'react-router-dom'
 import './IndexPage.css'
+
 const { default: ControlledCarousel } = require("../../components/Carousels/Carousels")
 
 
@@ -27,11 +28,13 @@ const IndexPage = () => {
             <Eslogan />
 
             <video src='../../videos/pexels-any-lane-5727374.mp4' autoPlay muted loop></video>
-
+            
+            <div className='indexButtons'>
             <Link to="/getAllEvents">
                 <Button  className="button" size='lg'> Eventos </Button> </Link>
             <Link to="/getAllProducts">
                 <Button  size='lg'> productos </Button> </Link>  
+                </div>
 
         </div>
     )

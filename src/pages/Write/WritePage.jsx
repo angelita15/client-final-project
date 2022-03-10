@@ -12,7 +12,7 @@ const Write =() => {
                 alt=""
             />
             <form className="writeForm">
-                <div className="writeFormGroup">
+                {/* <div className="writeFormGroup">
                     <label htmlFor="fileInput">
                         <i className="writeIcon fas fa-plus"></i>
                     </label>
@@ -23,7 +23,7 @@ const Write =() => {
                         type="text"
                         autoFocus={true}
                     />
-                </div>
+                </div> */}
                 <div className="writeFormGroup">
                     <textarea
                         className="writeInput writeText"
@@ -33,7 +33,7 @@ const Write =() => {
                     />
                 </div>
                 <button className="writeSubmit" type="submit">
-                    Publish
+                    Publicar
                 </button>
             </form>
 

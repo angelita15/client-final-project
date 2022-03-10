@@ -1,0 +1,15 @@
+.formSearch input{
+    width: 50%;
+    border: solid 2px rgb(69, 85, 236);
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50px;
+
+}
+
+.formSearch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

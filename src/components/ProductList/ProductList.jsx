@@ -1,8 +1,12 @@
 import { Row, Col } from 'react-bootstrap'
 import ProductCard from '../ProductCard/ProductCard'
 
-const ProductList = ({ products }) => {
+
+const ProductList = ({products}) => {
+
+   
     return (
+        <>
         <Row>
             {products.map(product => {
                 return (
@@ -13,6 +17,8 @@ const ProductList = ({ products }) => {
                 )
             })}
         </Row>
+       
+        </>
     )
 }
 
