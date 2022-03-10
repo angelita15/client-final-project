@@ -3,9 +3,6 @@ body {
   background-image: url("../public/imagenes/fondo.png");
   background-repeat: no-repeat;
   background-size: cover; 
-  /* background-color: red; */
-
-
 }
 
 a {
@@ -17,7 +14,7 @@ a {
   display:flex;
   justify-content: center;
   align-items:center;
- 
+
 
 }
 .container{
@@ -37,7 +34,7 @@ h2{
   text-align: center;
   text-decoration-line: underline;
   font-weight: bolder;
-
+  
 }
 .text{
 font-size: 20px;
@@ -48,5 +45,26 @@ font-size: 20px;
   height: 50px;
 }
 .card {
-  background-color: transparent;
+  background-color: rgba(189, 241, 255, .25);
+  
+}
+.texto{
+  padding: 50px;
+  margin: 20px;
+}
+h3{
+  color: #d696d8;
+  font-weight: bolder;
+  font-size: 50px;
+  font-family:allura;
+  
+}
+p{
+  color: #42aaaa;
+  font-size: 30px
+}
+.stileBottons{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
 }

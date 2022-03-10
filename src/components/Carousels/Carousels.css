@@ -4,4 +4,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    /* opacity: 2; */
+    filter: opacity(0.9)
 }

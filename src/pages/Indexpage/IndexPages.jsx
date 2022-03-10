@@ -1,8 +1,8 @@
-import { Container, Button } from 'react-bootstrap'
+import { Container, Button, Figure } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import { SocialButtons } from '../../components/Buttons/Buttons'
 import { FacebookButtons } from '../../components/Buttons/Buttons'
-
+import Eslogan from '../../components/Imagenes/imagenes'
 import { Link } from 'react-router-dom'
 import './IndexPage.css'
 const { default: ControlledCarousel } = require("../../components/Carousels/Carousels")
@@ -16,15 +16,7 @@ const IndexPage = () => {
             <ControlledCarousel />
             <SocialButtons />
             <FacebookButtons />
-
-{/* 
-            <div className='imaginalo'>
-                <img src="../../imagenes/fondo.png" alt="fondo" />
-            </div> */}
-
-
-
-
+            <Eslogan />
 
             <video src='../../videos/pexels-any-lane-5727374.mp4' autoPlay muted loop></video>
 

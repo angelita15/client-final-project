@@ -63,7 +63,7 @@ const ProductDetailsPage = () => {
                                 {productDetails.images?.map((image) => {
                                     return (
                                         <Carousel.Item> 
-                                            <img style={{ width: '50%' }} src={image} alt={image} />
+                                            <img style={{ width: '80%' }} src={image} alt={image} />
                                         </Carousel.Item>
                                     )
                                 }) }
@@ -71,6 +71,8 @@ const ProductDetailsPage = () => {
 
 
                             </Col>
+
+                            <div className='stileBottons'> 
                             <Link to="/getAllProducts">
                                 <Button variant="outline-primary" size='lg'> volver a todos los productos </Button>
                             </Link>
@@ -80,9 +82,11 @@ const ProductDetailsPage = () => {
                                     <Button variant="outline-primary" size='lg'> crear </Button>
                                 </Link>}
 
-                            {
+                            {  
                                 isLoggedIn &&
-                                <Button variant="light" onClick={deleteProduct}>Borrar producto</Button>
+                                <Link to={''}>
+                                        <Button variant="outline-primary" onClick={deleteProduct}>Borrar producto</Button>
+                                </Link>
                             }
 
                             {
@@ -91,10 +95,11 @@ const ProductDetailsPage = () => {
                                     <Button variant="outline-primary" size='lg'> EDITAR </Button>
                                 </Link>
                             }
-
+                            </div>
 
                         </Row>
                     </Container>
+                    
             }
         </>
 

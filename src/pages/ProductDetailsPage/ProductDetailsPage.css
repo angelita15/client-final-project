@@ -1,7 +1,9 @@
 h1 {
- color: rgb(136, 231, 231);
+ color:#509797;
  text-align: center;
  text-decoration-line: underline;
+font-weight: bolder;
+font-size: 50px;
 }
 
 h3 {

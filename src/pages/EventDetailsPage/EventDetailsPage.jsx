@@ -42,7 +42,7 @@ const EventDetailsPage = () => {
         <>
             {
                 loading
-                    ? <h1>Cargando</h1>
+                    ? <h3>Cargando</h3>
                     : <Container className='hero'>
                         <h2>Evento: {eventDetails.title} </h2>
                         <Row className="d-flex justify-content-center aling-items-center">
@@ -66,9 +66,11 @@ const EventDetailsPage = () => {
 
                             {
                                 isLoggedIn &&
-
-                                <Button variant="light" onClick={deleteEvent}>Borrar evento</Button>
+                                <Link to={''}>
+                                <Button variant="outline-primary" onClick={deleteEvent}>Borrar evento</Button>
+                                </Link>
                             }
+
 
                             {
                                 isLoggedIn &&
