@@ -60,14 +60,16 @@ const EventDetailsPage = () => {
                             <Col md={6}>
                                 <img style={{ width: '75%' }} src={eventDetails.image} alt={eventDetails.title} />
                             </Col>
+
+                            <div className='stileBottons'> 
                             <Link to="/getAllEvents">
-                                <Button variant="outline-primary" size='lg'> volver a todos los eventitos </Button>
+                                <Button  size='lg'> volver </Button>
                             </Link>
 
                             {
                                 isLoggedIn &&
                                 <Link to={''}>
-                                <Button variant="outline-primary" onClick={deleteEvent}>Borrar evento</Button>
+                                <Button  onClick={deleteEvent}>Borrar evento</Button>
                                 </Link>
                             }
 
@@ -75,15 +77,16 @@ const EventDetailsPage = () => {
                             {
                                 isLoggedIn &&
                                 <Link to={`/editEvent/${events_id}`}>
-                                    <Button variant="outline-primary" size='lg'> EDITAR </Button>
+                                    <Button  size='lg'> Editar </Button>
                                 </Link>
                             }
                             {
                                 isLoggedIn &&
                                 <Link to="/crear">
-                                    <Button variant="outline-primary" size='lg'> crear </Button>
+                                    <Button size='lg'> Crear </Button>
                                 </Link>
                             }
+                            </div>
                         </Row>
                     </Container>
             }

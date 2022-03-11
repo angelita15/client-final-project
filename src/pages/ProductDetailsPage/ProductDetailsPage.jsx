@@ -61,11 +61,11 @@ const ProductDetailsPage = () => {
                             </Col>
                             <Col md={6}>
 
-                              <Carousel> 
+                              <Carousel className='carrouselimg'> 
                                 {productDetails.images?.map((image) => {
                                     return (
                                         <Carousel.Item> 
-                                            <img style={{ width: '80%' }} src={image} alt={image} />
+                                            <img style={{ width: '85%' }} src={image} alt={image} />
                                         </Carousel.Item>
                                     )
                                 }) }
@@ -76,25 +76,25 @@ const ProductDetailsPage = () => {
 
                             <div className='stileBottons'> 
                             <Link to="/getAllProducts">
-                                <Button variant="outline-primary" size='lg'> volver a todos los productos </Button>
+                                <Button  size='lg'> Volver  </Button>
                             </Link>
                             {
                                 isLoggedIn &&
                                 <Link to="/crearProducto">
-                                    <Button variant="outline-primary" size='lg'> crear </Button>
+                                    <Button  size='lg'> Crear </Button>
                                 </Link>}
 
                             {  
                                 isLoggedIn &&
                                 <Link to={''}>
-                                        <Button variant="outline-primary" onClick={deleteProduct}>Borrar producto</Button>
+                                        <Button  onClick={deleteProduct}>Borrar producto</Button>
                                 </Link>
                             }
 
                             {
                                 isLoggedIn &&
                                 <Link to={`/editProduct/${products_id}`}>
-                                    <Button variant="outline-primary" size='lg'> EDITAR </Button>
+                                    <Button  size='lg'> Editar </Button>
                                 </Link>
                             }
                             </div>

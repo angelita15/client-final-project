@@ -1,16 +1,18 @@
 
 import './ProductList.css'
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import ProductList from "../../components/ProductList/ProductList"
-import { Container } from 'react-bootstrap'
+import { Container, Button } from 'react-bootstrap'
 import productsService from "../../services/products.service"
 import SearchProducts from '../../components/Search/Search'
-
+import { Link } from 'react-router-dom'
 import { SocialButtons } from '../../components/Buttons/Buttons'
 import { FacebookButtons } from '../../components/Buttons/Buttons'
+import { AuthContext } from '../../context/auth.contex'
 
 const ProductListPage = () => {
 
+    const { isLoggedIn } = useContext(AuthContext)
     let [products, setProducts] = useState([])
 
     let [productsCopy, setProductscopy] = useState([])
@@ -45,6 +47,11 @@ const ProductListPage = () => {
             <ProductList products={products} />
             <SocialButtons />
             <FacebookButtons />
+            {
+                isLoggedIn &&
+                <Link to="/crearProducto">
+                    <Button size='lg'> Crear </Button>
+                </Link>}
         </Container>
 
     )
